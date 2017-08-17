@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+
+/*右侧iframe*/
+.iframex{
+    /*padding: 0;*/
+    margin-left: 40px;
+   /* opacity: 0.1;*/
+}
+
+.weather1{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+     background-color: transparent;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.weather1 .weather1-title{
+    color: #1167d6;
+}
+
+/*搜索*/
+.weather1 .form-horizontal .form-group .control-label1{
+    color: #ffffff;
+    text-align: left;
+    float: left;
+    margin-left: 16px;
+}
+
+
+.weather1 .weather1-title2 .form-title1{
+    margin-top: 20px;
+}
+.weather1 .weather1-title2 .title2-btn{
+
+}
+
+
+.weather1 .form-title1 .btn-search1{
+    width: 100px;
+    background-color: #013684;
+    color: #fff;border: none;
+}
+
+.weather1 .form-title1 .btn-add{
+    width: 100px;
+    background-color: #0087e3;
+    color: #ffffff;
+    border: none;
+}
+.weather1 .form-title1 .btn-play{
+    width: 100px;
+    background-color: #23a1d1;
+    color: #ffffff;
+    border: none;
+}
+
+.weather1 .form-title1 .btn-edit{
+    width: 100px;
+    background-color: #259fd0;
+    color: #ffffff;
+    border: none;
+}
+.weather1 .form-title1 .btn-delete{
+    width: 100px;
+    background-color: #ea8501;
+    color: #ffffff;
+    border: none;
+}
+
+
+.weather1 .form-title1 .fabuping01{
+    float: right;
+    text-align: right;
+    margin-right: 100px;
+}
+/*表格栏*/
+.weather1-cont{
+    width: 1520px;
+    height: 610px;
+}
+.weather1-cont .table{
+    text-align: center;
+}
+
+.weather1-cont .table thead tr th{
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.weather1-cont .table tbody{
+    z-index: 999;
+    background-color: #ffffff;
+}
+.weather1-cont .table tbody tr td .btn-delete {
+    width: 60px;
+    height: 26px;
+    background-color: #e38200;
+    color: #fff;
+}
+.weather1-cont .table tbody tr td img{
+    width: 80px;
+    height: 26px;
+}
+
+/*分页*/
+.weather1-footer{
+    padding-right: 150px;
+}
+.weather1-footer .paging{
+    color: #005ddb;
+    float: right;
+    line-height: 36px;
+    margin-right: 10px;
+}
+
+.weather1-footer .pager1{
+    width: 60px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #012d6a;
+    border-radius: 4px;
+    color: #005ddb;
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+
+
+
+

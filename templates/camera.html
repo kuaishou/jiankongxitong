@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>视频监控系统</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/camera.css">
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.min.js"></script>
+    <![endif]-->
+	<style>
+	</style>
+</head>
+<body class="camera">
+<!--头部-->
+<header class="weather-header">
+	<h2 class="camera-title">视频监控系统</h2>	
+	<ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#home" data-toggle="tab">
+                <span class="glyphicon glyphicon-facetime-video"></span> 摄像头
+            </a>
+        <li><a href="#ios" data-toggle="tab"> <span class="glyphicon glyphicon-th-large"></span> 主预览</a>
+    </ul>
+</header>
+<div class="container">
+<section>
+
+
+
+		<!--<div id="myTabContent" class="tab-content">
+			<div class="tab-pane fade in active col-md-2" id="home">
+			</div>
+			<div class="tab-pane fade" id="ios">
+				<p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+					TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+			</div>
+		</div>-->
+
+	<!--查询部分-->
+	<form class="form-inline">
+		<fieldset class="camera-search">
+			<div class="form-group col-sm-3" >
+				<label for="title-name" >名称</label>
+				<input type="text" class="form-control" id="title-name" placeholder="请输入关键字">
+			</div>
+			<button type="button" class="btn btn-primary" onclick="getTableData('begin')">搜索</button>
+		</fieldset>
+	</form>
+	<!--添加删除部分-->
+	    <div class="camera-button">
+        <button class="btn btn-primary" id="add" data-toggle="modal" data-target="#myModal">添加</button>
+		<!--添加页面模态弹出框-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">添加摄像头信息</h4>
+                    </div>
+                    <div class="modal-body">
+						<form class="form-horizontal" id="saveFrom">
+							<div class="form-group">
+								<label for="num" class="col-sm-3 control-label">编号</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="num"  placeholder="请填写编号"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="name" class="col-sm-3 control-label">名称</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="name"  placeholder="请填写名称"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="view" class="col-sm-3 control-label">景区</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="view"  placeholder="请填写景区"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="lon" class="col-sm-3 control-label">经度</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="lon"  placeholder="请填写经度"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="lat" class="col-sm-3 control-label">纬度</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="lat"  placeholder="请填写纬度"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="ip" class="col-sm-3 control-label">接口地址</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="ip"  placeholder="请填写接口地址"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="port" class="col-sm-3 control-label">端口</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="port"  placeholder="请填写端口"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="username" class="col-sm-3 control-label">用户名</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="username"  placeholder="请填写用户名"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="password" class="col-sm-3 control-label">密码</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="password"  placeholder="请填写密码"/>
+								</div>
+							</div>
+						</form>
+					</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">提交</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<!--列表部分-->
+    <div class="table-responsive camera-table">
+        <table  class="table table-hover">
+            <thead>
+            <tr>
+                <th>设备名称</th>
+                <th>设备类型</th>
+                <th>IP</th>
+                <th>端口</th>
+                <th>用户名</th>
+                <th>密码</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>办公监控</td>
+                <td>hivision</td>
+                <td>127.0.0.1</td>
+                <td>8080</td>
+                <td>admin</td>
+                <td>123456</td>
+				<td>
+					<button class="btn btn-mini btn-info" data-toggle="modal" data-target="#editModal">编辑</button>
+					<button class="btn btn-mini btn-warning" data-toggle="modal" data-target="#delModal">删除</button>
+				</td>
+            </tr>
+
+            <tr>
+                <td>办公监控</td>
+                <td>hivision</td>
+                <td>127.0.0.1</td>
+                <td>8080</td>
+                <td>admin</td>
+                <td>123456</td>
+				<td>
+					<button class="btn btn-mini btn-info"  data-toggle="modal" data-target="#editModal">编辑</button>
+					<button class="btn btn-mini btn-warning" data-toggle="modal" data-target="#delModal">删除</button>
+				</td>
+            </tr>
+
+
+            <tr>
+                <td>办公监控</td>
+                <td>hivision</td>
+                <td>127.0.0.1</td>
+                <td>8080</td>
+                <td>admin</td>
+                <td>123456</td>
+				<td>
+					<button class="btn btn-mini btn-info"  data-toggle="modal" data-target="#editModal">编辑</button>
+					<button class="btn btn-mini btn-warning" data-toggle="modal" data-target="#delModal">删除</button>
+				</td>
+            </tr>
+            </tbody>
+			
+        </table>
+    </div>
+	
+		<!--编辑页面模态弹出框-->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">编辑摄像头信息</h4>
+                    </div>
+                    <div class="modal-body">
+						<form class="form-horizontal" id="editFrom">
+							<div class="form-group">
+								<label for="num" class="col-sm-3 control-label">编号</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="num"  placeholder="请填写编号"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="name" class="col-sm-3 control-label">名称</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="name"  placeholder="请填写名称"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="view" class="col-sm-3 control-label">景区</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="view"  placeholder="请填写景区"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="lon" class="col-sm-3 control-label">经度</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="lon"  placeholder="请填写经度"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="lat" class="col-sm-3 control-label">纬度</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="lat"  placeholder="请填写纬度"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="ip" class="col-sm-3 control-label">接口地址</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="ip"  placeholder="请填写接口地址"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="port" class="col-sm-3 control-label">端口</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="port"  placeholder="请填写端口"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="username" class="col-sm-3 control-label">用户名</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="username"  placeholder="请填写用户名"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="password" class="col-sm-3 control-label">密码</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="password"  placeholder="请填写密码"/>
+								</div>
+							</div>
+						</form>
+					</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">提交</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		
+				<!--编辑页面模态弹出框-->
+		<div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                    </div>
+                    <div class="modal-body">
+						你确定要删除此内容内容吗？
+					</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">提交</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="camera-foot">
+		<span class="pageindex">第1页/共6页</span>
+        <ul class="pager">
+            <li><a href="#">上一页</a></li>
+            <li><a href="#">下一页</a></li>
+        </ul>
+    </div>
+</section>
+</div>
+
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

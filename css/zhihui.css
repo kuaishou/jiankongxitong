@@ -1,0 +1,281 @@
+/*样式通过id限定
+
+/*
+头部区域
+*/
+.zhihui{
+     background-image:url("../img/bg.jpg");
+}
+#header{
+    height: 90px;
+    line-height: 90px;
+    color: #fff;
+    border-bottom: 2px solid #0a2655;
+}
+#header .time{
+    display: block;
+    float: left;
+    width: 360px;
+    text-align: center;
+    line-height: 90px;
+    color: #fff;
+}
+#header .title{
+    float: left;
+    width: 1500px;
+    text-align: center;
+    line-height: 90px;
+    color: #fff;
+}
+#header .title img{
+    float: left;
+    display: inline-block;
+    margin-left: 300px;
+    margin-top: 26px;
+}
+#header .title h2{
+    float: left;
+    height: 100px;
+    font-size: 42px;
+    line-height: 90px;
+    margin-left: 10px;
+}
+
+
+/*内容板块左边*/
+.left{
+    float: left;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.left .left-header{
+    width: 815px;
+    height: 140px;
+
+}
+.left .left-header .people-nubtitle{
+    float: left;
+    width: 45px;
+    height: 140px;
+    background-color: #020816;
+}
+
+.color-box{
+    margin:0 auto;
+    width: 22px;
+    height: 4px;
+    margin-top: 20px;
+    background-color: #329da3;
+}
+.title-words{
+    margin:0 auto;
+    width:22px;
+    line-height:24px;
+    color: #fff;
+}
+
+.left .left-header .people-nub{
+    float: left;
+    width: 755px;
+    height: 140px;
+    color: #fff;
+    opacity: 0.8;
+    background: url(../img/lbg1.jpg) -1px -1px no-repeat;
+}
+
+.left .left-header .people-nub h4{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    font-size: 28px;
+}
+.left .left-header .people-nub ul{
+    margin-left: 200px;
+}
+.left .left-header .people-nub ul li{
+    float: left;
+    width: 36px;
+    height: 60px;
+    margin-top: 20px;
+    line-height: 60px;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 2px;
+    font-size: 42px;
+}
+.left .left-header .people-nub ul .red-nub{
+    background-color: #eb4470;
+}
+.left .left-header .people-nub ul .blue-nub{
+    background-color: #2fa2f2;
+}
+.left .left-header .people-nub ul .green-nub{
+    background-color: #7ed320;
+}
+/*左边中间内容*/
+
+.left-mid{
+    margin-top: 20px;
+    height: 310px;
+    width: 815px;
+}
+.left-mid .mid-title{
+    float: left;
+    height: 310px;
+    width: 45px;
+    background-color: #020816;
+}
+
+.left-mid .mid-cont{
+    float: left;
+    width: 760px;
+    height: 310px;
+    color: #fff;
+    padding-left: 30px;
+    opacity: 0.8;
+    background: url(../img/lbg2.jpg) -1px -1px no-repeat;
+}
+
+
+.left-mid .mid-cont .table-striped > tbody > tr:nth-of-type(odd) {
+     background-color: transparent;
+}
+.left-mid .mid-cont .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 0px;
+    padding-left: 20px;
+    line-height: 1.42857143;
+    vertical-align: top;
+     border-top: none;
+}
+.left-mid .mid-cont .table > thead> tr > th{
+    height: 60px;
+    line-height: 60px;
+    vertical-align: bottom;
+    border-bottom: 1px solid #15294c;
+}
+.left-mid .mid-cont .table > tbody > tr > td{
+    height: 80px;
+    line-height: 80px;
+    padding: 0;
+    padding-left: 20px;
+    vertical-align: bottom;
+}
+
+.left-footer{
+    margin-top: 20px;
+    height: 300px;
+    width: 815px;
+}
+.left-footer .footer-title{
+    float: left;
+    height: 300px;
+    width: 45px;
+    background-color: #020816;
+}
+.left-footer .footer-cont{
+    float: left;
+    width: 760px;
+    height: 300px;
+    color: #fff;
+    padding-left: 30px;
+    opacity: 0.8;
+    background: url(../img/lbg3.jpg) -1px -1px no-repeat;
+}
+
+.left-mid .mid-cont .table > tbody > tr > .item {
+    width: 250px;
+    height: 80px;
+    line-height: 80px;
+    padding: 0;
+    padding-left: 20px;
+    vertical-align: bottom;
+}
+
+.right{
+    float: left;
+}
+.right-top{
+    width: 1024px;
+    height: 246px;
+}
+.right-top .right-topl{
+    float: left;
+    width: 502px;
+    height: 236px;
+}
+
+.right-top .right-topr{
+    margin-left: 20px;
+}
+.right-top .righttl-title{
+    float: left;
+    height: 236px;
+    width: 45px;
+    background-color: #020816;
+
+}
+.right-top .righttl-cont{
+    float: left;
+    width: 457px;
+    height: 236px;
+    color: #fff;
+    background: url(../img/lbg3.jpg) -1px -1px no-repeat;
+}
+
+.right-top .righttl-cont .righttl-cont1{
+    float: left;
+    width: 212px;
+    height: 215px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #0a1a31;
+}
+.right-top .righttl-cont .righttl-cont1 h4{
+    font-size: 24px;
+    margin-left: 30px;
+   padding-top: 6px;
+}
+.right-top .righttl-cont .righttl-cont1 .cont1mid{
+    height: 100px;
+    width: 100%;
+    line-height: 100px;
+}
+.right-top .righttl-cont .righttl-cont1 .cont1mid img{
+    width: 45px;
+    height: 45px;
+    margin-left: 30px;
+    margin-top: -16px;
+}
+.right-top .righttl-cont .righttl-cont1 .cont1mid .temperature{
+    letter-spacing: 4px;
+    font-size: 36px;
+}
+.right-top .righttl-cont .righttl-cont1 .cont1mid .day{
+    font-size: 16px;
+}
+
+.right-top .righttl-cont .righttl-cont1 .cont1footer{
+    height: 80px;
+    font-size: 16px;
+}
+.right-top .righttl-cont .righttl-cont1 .cont1footer .wind{
+    float: left;
+}
+.right-top .righttl-cont .righttl-cont1 .cont1footer p{
+    height: 40px;
+    text-align: center;
+}
+
+
+
+
+.right-footer{
+    margin-top: 0px;
+    width: 1024px;
+    height: 550px;
+}
+.right-footer img{
+    float: left;
+}

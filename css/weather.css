@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+.weather{
+    background: url("../img/bg.jpg");
+}
+
+.weather-header{
+    position: relative;
+    height:90px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #0a2a59;
+}
+.weather-header h2{
+    color: #ffffff;
+    line-height: 92px;
+    font-size: 42px;
+
+}
+
+/*一级导航*/
+/*
+.weather-header .nav-tabs {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+     border-bottom: 0px solid #ddd;
+    height: 92px;
+}
+.weather-header .nav-tabs li{
+    width: 180px;
+    height: 60px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+.weather-header .nav-tabs li a{
+    color: #ffffff;
+    border-radius: 4px;
+    background-color: transparent;
+}
+.weather-header .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+     color: #ffffff;
+     cursor: default;
+    background-color: #002b6f;
+    border: 0px solid #ddd;
+}
+*/
+
+/*左侧面包导航*/
+
+
+.weather-cont .tab-content #home .panel-group {
+    width: 100%;
+    height: 800px;
+    margin-left: 10px;
+    margin-top: 6px;
+    padding-left: 20px;
+    border: 1px solid #00235b;
+    background-color: #00183e;
+    color: #ffffff;
+}
+.weather-cont .tab-content #home .panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+    background-color: #00183e;
+}
+.weather-cont .tab-content #home .panel-group .panel-default{
+    border: none;
+}
+.weather-cont .tab-content #home .panel-group .panel-default>.panel-heading {
+    color: #ffffff;
+    background-color: #00183e;
+    border: none;
+}
+
+.weather-cont .tab-content #home .panel-group .panel-default>.panel-heading+.panel-collapse>.panel-body {
+     border: none;
+}
+.weather-cont .tab-content #home .panel-group .panel-default .panel-heading .panel-title a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    text-decoration: none;
+    background-color: #00183e;
+
+}
+.weather-cont .tab-content #home .panel-group .panel-default .panel-heading .panel-title a span{
+  margin-right: 10px;
+}
+
+
+.weather-cont .tab-content #home .panel-group .panel-default .panel-collapse .panel-body ul li{
+    font-size: 18px;
+    width: 100%;
+    height: 40px;
+
+}
+.weather-cont .tab-content #home .panel-group .panel-default .panel-collapse .panel-body .nav-tabs{
+    border: none;
+}
+.weather-cont .tab-content #home .panel-group .panel-default .panel-collapse .panel-body .nav-tabs>li>a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    border-radius: 3px;
+   /* background-color: #00091a;*/
+    color: #ffffff;
+     padding: 0;
+    padding-left: 60px;
+}
+
+.weather-cont .tab-content #home .panel-group .panel-default .panel-collapse .panel-body .nav-tabs>li>a:hover{
+    border-radius: 3px;
+     background-color: #00091a;
+}
+
+
+/*右侧iframe*/

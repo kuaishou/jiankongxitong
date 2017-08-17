@@ -1,0 +1,218 @@
+/*样式通过id限定
+尽可能多使用直接子代选择器*/
+
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow:Scroll;
+    overflow-x:hidden;
+    font-family:  Microsoft Yahei;
+}
+
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+textarea {
+    resize: none;
+}
+
+/*防止拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+body{
+    font-family: "Microsoft Yahei", Helvetica,Helvetica Neue, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font-size: 22px;
+}
+@font-face {
+    font-family: 'itcast';
+    src: url('../font/MiFie-Web-Font.eot') format('embedded-opentype'),
+    url('../font/MiFie-Web-Font.svg') format('svg'),
+    url('../font/MiFie-Web-Font.ttf') format('truetype'),
+    url('../font/MiFie-Web-Font.woff') format('woff');
+}
+
+.index-body{
+    margin-top: 100px;
+    background-image:url("../img/background-login.jpg");
+
+}
+.map-body{
+    background-image:url("../img/bg.jpg");
+
+}
+
+#header{
+    height: 90px;
+    line-height: 90px;
+    color: #fff;
+    border-bottom: 2px solid #0a2655;
+}
+
+
+/*登录*/
+.login-input{
+	height: 80px;
+    font-size:30px;
+	font-family:MicrosoftYahei;
+	border-left:0px;
+}
+
+.login-img{
+	width: 55px;
+}
+
+.login-glyspan{
+	font-size:30px;
+	background-color:white;
+	border-right:0px;
+}
+
+.login-button{
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	font-size:30px;
+	color:white;
+	font-family:MicrosoftYahei;
+	height: 80px;
+	width: 440px;
+	margin-top: 30px;
+}
+
+.camera-img{
+	color: white;
+    position: relative;
+    left: 200px;
+    font-size: 65px;
+    top: -21px;
+}
+
+.travel-index-title{
+	font-family:MicrosoftYahei;
+	font-size:60px;
+	color:white;
+	text-align:center;
+}
+
+.travel-index-btngroup{
+	position: relative;
+	color: white;
+	font-family:MicrosoftYahei;
+	font-size:24px;
+	left: 100px;
+	margin-top: 70px;
+	
+}
+
+.travel-index-groupicon{
+	background-image:url("../img/glyphicons-44-group.png");
+}
+
+
+.travel-index-btngroup .travel-index-btndetail{
+    margin-top: 8px;
+	margin-left: -17px;
+}
+
+.travel-index-btngroup a{
+	font-size:50px;
+    width: 100px;
+    height: 100px;
+	padding-left: 20px;
+    padding-top: 20px;
+}
+
+.map-index{
+	height:820px;
+	width:100%;
+	z-index:-1;
+}
+
+
+.col-xs-1 .map-checkbox{
+    zoom:150%;
+    margin:0;
+}
+
+.map01{
+    position: relative;
+}
+.map01 .map-detail{
+    position: absolute;
+    bottom: 168px;
+    left: 360px;
+    width:200px;
+    color:#ffffff;
+}
+
+.map-detail-title{
+	text-align:center;
+	background-image:url("../img/map-header.jpg");
+	background-size:cover;  
+}
+
+.map-detail-content{
+	background-image:url("../img/map-bottom.jpg");
+	background-size:cover;  
+}

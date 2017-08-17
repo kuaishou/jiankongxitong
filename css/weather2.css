@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+
+/*发布屏控制*/
+
+
+
+.fabu-cont{
+    width: 96%;
+    height: 720px;
+    margin-top: 30px;
+    background-color: #00163b;
+    color: #ffffff;
+}
+.fabu-cont .checkbox-all{
+    float: left;
+   width: 21%;
+    height: 100%;
+    padding-top: 40px;
+}
+.fabu-cont .checkbox-all .panel {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    text-align: left;
+    margin: 0;
+    border: 0;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+    padding: 0px;
+
+}
+.checkbox-all .panel-body {
+    background-color:#00163b;
+    color: #ffffff;
+    font-size: 12px;
+    border: none;
+    overflow-y: hidden;
+}
+/*趣掉多余背景图标*/
+.checkbox-all .panel-body .tree-folder-open {
+    background: none;
+}
+.checkbox-all .panel-body .tree-folder {
+    background: none;
+}
+.checkbox-all .panel-body .tree-file {
+    background: none;
+}
+.checkbox-all .panel-body  .tree-title{
+    font-size: 22px;
+    line-height: 40px;
+    font-family: "Microsoft Yahei";
+
+}
+
+.checkbox-all .panel-body .tree-checkbox{
+    margin-top: 10px;
+}
+.checkbox-all .panel-body .tree-collapsed {
+    margin-top: 10px;
+}
+.checkbox-all .panel-body .tree-node-selected{
+    font-size: 18px;
+}
+
+.checkbox-all .panel-body .tree-node {
+    height: 40px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/*右侧表单提交*/
+.fabu-cont .form-horizontal{
+    width: 36%;
+    float: left;
+    margin-top: 80px;
+}
+
+.fabu-cont .form-horizontal .form-group .form-prompt{
+    color: #fe0000;
+    display: inline-block;
+    line-height: 34px;
+}
+.fabu-cont .form-horizontal .form-group .form-prompt01{
+    color: #fe0000;
+    display: inline-block;
+    line-height: 90px;
+}
+.fabu-cont .form-horizontal .form-group .btn-play{
+    width: 100px;
+    background-color: #25a3d3;
+    color: #ffffff;
+    border: none;
+    margin-top: 30px;
+
+
+}
+
+.fabu-cont .form-horizontal .form-group  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+     padding-left: 0px;
+}
+
+
+
