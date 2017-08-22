@@ -27,53 +27,84 @@
     float: left;
     margin-left: 16px;
 }
+.weather1 .form-horizontal .form-group .control-label2{
+    color: #ffffff;
+    text-align: left;
+    float: left;
+    margin-left: 16px;
+    margin-right: 10px;
+}
 
+.weather1 .right-btnx{
+    float: right;
+}
+
+.weather1 .right-btnx .btn-add{
+
+}
+.weather1 .right-btnx .btn-play{
+    margin-right: 100px;
+}
+
+
+
+.weather1 .weather1-title2{
+    padding-top: 20px;
+}
 
 .weather1 .weather1-title2 .form-title1{
-    margin-top: 20px;
 }
 .weather1 .weather1-title2 .title2-btn{
-
 }
-
-
 .weather1 .form-title1 .btn-search1{
     width: 100px;
     background-color: #013684;
     color: #fff;border: none;
 }
 
-.weather1 .form-title1 .btn-add{
+.weather1  .btn-add{
     width: 100px;
     background-color: #0087e3;
     color: #ffffff;
     border: none;
 }
-.weather1 .form-title1 .btn-play{
+
+.weather1  .btn-play{
     width: 100px;
     background-color: #23a1d1;
     color: #ffffff;
     border: none;
 }
 
-.weather1 .form-title1 .btn-edit{
+.weather1  .btn-edit{
     width: 100px;
     background-color: #259fd0;
     color: #ffffff;
     border: none;
 }
-.weather1 .form-title1 .btn-delete{
+.weather1  .btn-delete{
     width: 100px;
     background-color: #ea8501;
     color: #ffffff;
     border: none;
 }
 
+.weather1 .modal-title {
+    text-align: center;
+    margin: 0;
+    line-height: 1.42857143;
+}
 
-.weather1 .form-title1 .fabuping01{
+
+.weather1  .fabuping01{
     float: right;
-    text-align: right;
+   /* text-align: right;*/
     margin-right: 100px;
+}
+
+.weather1  .fabuping01 #delModal .modal-body{
+    text-align: left;
+
 }
 /*表格栏*/
 .weather1-cont{
@@ -129,6 +160,67 @@
 }
 
 
+.weather1 .fileup{
+    float: left;
+    width: 40%;
+    padding-top: 0px;
+}
+
+.weather1 .fileup label{
+    float: left;
+    color: #000000;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.weather1 .fileup .fileup-box{
+    margin: 60px auto;
 
 
+}
+.weather1 .fileup .fileup-box label{
+    margin-right: 30px;
+    margin-left: 60px;
+    font-size: 16px;
+    line-height: 30px;
+}
+.weather1 .fileup .fileup-box input{
+    font-size: 16px;
+    width: 80px;
+}
+.weather1 .fileup .fileup-btn button{
+    width: 100px;
+
+}
+
+.weather1 .fileup .fileup-btn .fileup-btn-go{
+    background-color: #25a5d4;
+    color: #ffffff;
+}
+
+.modal-header{
+    color: #ffffff;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background: -webkit-linear-gradient(#01419b, #012861); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#01419b, #012861); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#01419b, #012861); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(#01419b, #012861); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#01419b, #012861); /* 标准的语法 */
+}
+.modal-header button{
+    color: #ffffff;
+}
+
+
+
+/*定时控制*/
+.weather1 .weather1-title2 .dingshi-form{
+    float: left;
+    width: 70%;
+}
+.weather1 .fabu-cont .diangshibtn-delete{
+    margin-top: 30px;
+}
 

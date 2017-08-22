@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>环境监控系统-文件上传</title>
+
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../lib/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/weather1.css">
+    <link rel="stylesheet" type="text/css" href="../css/weather2.css"/>
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.min.js"></script>
+    <![endif]-->
+	<style>
+	</style>
+</head>
+<body class="weather1">
+
+<section>
+    <h4 class="weather1-title">德夯景区>播放管理</h4>
+
+
+
+    <!--搜索栏-->
+
+  <div class="weather1-title2">
+    <form class="col-sm-8 form-horizontal form-title1" role="form">
+        <div class="form-group">
+            <label for="firstname" class="control-label control-label1">文件名</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="firstname" placeholder="请输入文件名">
+            </div>
+            <div class="col-sm-1">
+            <button type="submit" class="btn btn-default btn-search1">搜索</button>
+            </div>
+        </div>
+    </form>
+
+      <div class="col-sm-3 right-btnx">
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-add" data-toggle="modal" data-target="#myModal">上传</button>
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel0">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel00">播放文件上传</h4>
+                      </div>
+                      <div class="modal-body">
+
+                          <div class="fabu-cont">
+                              <div class="col-lg-offset-2 checkbox-all">
+                                  <div class="easyui-panel">
+                                      <ul id="tt" class="easyui-tree" data-options="url:'tree_data.json',method:'get',animate:true,checkbox:true"></ul>
+                                  </div>
+                              </div>
+                              <form role="form" class="col-lg-offset-1 fileup">
+                                  <div class="form-group fileup-box">
+                                      <label for="inputfile">选择文件</label>
+                                      <input type="file" id="inputfile" class="">
+                                  </div>
+                                  <div class="form-group fileup-btn modal-footer">
+                                    <button type="button" class="btn btn-default btn-primary">添加</button>
+                                    <button type="button" class="btn btn-default fileup-btn-go">发送</button>
+                                    <button type="button" class="btn btn-default btn-warning" data-dismiss="modal">取消</button>
+                                  </div>
+                              </form>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <!-- Modal -->
+          <button type="button" class="btn btn-primary btn-play" data-toggle="modal" data-target="#play">播放</button>
+          <!-- Modal -->
+          <div class="modal fade" id="play" tabindex="-1" role="dialog" aria-labelledby="myModalLabel0">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel0">播放文件</h4>
+                      </div>
+                      <div class="modal-body">
+
+                          <div class="fabu-cont">
+
+                              <div class="col-lg-offset-2 checkbox-all">
+                                  <div class="easyui-panel">
+                                      <ul id="tt" class="easyui-tree" data-options="url:'tree_data.json',method:'get',animate:true,checkbox:true"></ul>
+                                  </div>
+                              </div>
+                              <form class="form-horizontal" action="#" role="form01" name="form01">
+                                  <div class="form-group">
+                                      <label for="firstname07" class="col-sm-2 control-label">停留时间</label>
+                                      <div class="col-sm-8">
+                                          <input type="number" class="form-control" id="firstname07" placeholder="5">
+                                      </div>
+                                      <span class="col-sm-2 form-prompt"></span>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="firstname03x" class="col-sm-2 control-label">显示方式</label>
+                                      <div class="col-sm-8">
+                                          <select class="form-control">
+                                              <option>直接显示</option>
+                                              <option>上移显示</option>
+                                              <option>下移显示</option>
+                                              <option>左移显示</option>
+                                              <option>右移显示</option>
+                                          </select>
+                                      </div>
+                                      <span class="col-sm-2 form-prompt"></span>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="firstname02" class="col-sm-2 control-label">备注</label>
+                                      <div class="col-sm-8">
+                                          <textarea name="biaoyu-text" class="form-control" id="" cols="30" rows="4" maxlength="50"></textarea>
+                                      </div>
+                                      <span class="col-sm-2 form-prompt01">*(50)</span>
+                                  </div>
+
+
+                                  <div class="form-group">
+                                      <div class="col-sm-offset-2 col-sm-10">
+                                          <button type="submit" class="btn btn-default btn-play col-sm-offset-3">播放</button>
+                                      </div>
+                                  </div>
+                              </form>
+
+                          </div>
+
+
+
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
+      </div>
+
+   </div>
+
+    <!--表格栏-->
+
+  <div class="weather1-cont">
+      <table class="table table-hover">
+          <thead>
+          <tr>
+              <th></th>
+              <th>播放序号</th>
+              <th>设备</th>
+              <th>原文件名</th>
+              <th>文件类型</th>
+              <th>状态</th>
+              <th>时长</th>
+              <th>上传人</th>
+              <th>上传日期</th>
+              <th>发布时间</th>
+              <th>备注</th>
+              <th>缩略图</th>
+              <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+          <tr>
+              <td><input type="checkbox"/></td>
+              <td>1</td>
+              <td>气象站1</td>
+              <td>qixiangzhan00</td>
+              <td>.bmp</td>
+              <td>未播放</td>
+              <td>5</td>
+              <td>sunwei</td>
+              <td>2017/8/817:22:00</td>
+              <td>2017/8/817:22:00</td>
+              <td>天气</td>
+              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+              <td><button class="btn-delete">X删除</button></td>
+          </tr>
+
+
+          </tbody>
+      </table>
+  </div>
+
+    <div class="weather1-footer">
+        <a href="#" class="pager1">上一页</a>
+        <a href="#" class="pager1">下一页</a>
+        <span class="paging">第1页/共5页</span>
+    </div>
+
+
+
+</section>
+
+
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../lib/easyui/jquery.easyui.min.js"></script>
+
+</body>
+</html>

@@ -6,9 +6,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>环境监控系统-文字信息</title>
-	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/weather1.css">
+
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../lib/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/weather1.css">
+    <link rel="stylesheet" type="text/css" href="../css/weather2.css"/>
     <!--[if lt IE 9]>
     <script src="lib/html5shiv/html5shiv.min.js"></script>
     <script src="lib/respond/respond.min.js"></script>
@@ -27,7 +31,7 @@
   <div class="weather1-title2">
     <form class="form-horizontal form-title1" role="form">
         <div class="form-group">
-            <label for="firstname" class="control-label control-label1">文件名</label>
+            <label for="firstname" class="control-label control-label2">文件名</label>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="firstname" placeholder="请输入文件名">
             </div>
@@ -38,10 +42,10 @@
             <div class="col-sm-offset-4 col-sm-4">
 
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary btn-add" data-toggle="modal" data-target="#myModal">添加</button>
+                <button type="button" class="btn btn-primary btn-add" data-toggle="modal" data-target="#add">添加</button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -52,50 +56,224 @@
 
                                 <form class="form-horizontal" role="form">
                                     <div class="form-group">
-                                        <label for="name1" class="col-sm-2 control-label">名称</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="name1" placeholder="请输入名字">
+                                        <label for="firstname01" class="col-sm-3 control-label">名称</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="firstname01" placeholder="请输入名字">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstname02" class="col-sm-3 control-label">标语内容</label>
+                                        <div class="col-sm-6">
+                                            <textarea name="biaoyu-text" class="form-control" id="" cols="30" rows="4" maxlength="50"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="name1" class="col-sm-2 control-label">文字内容</label>
-                                        <div class="col-sm-10">
-                                            <textarea class="form-control" rows="3"></textarea>
+                                        <label for="firstname03" class="col-sm-3 control-label">显示方式</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control">
+                                                <option>直接显示</option>
+                                                <option>上移显示</option>
+                                                <option>下移显示</option>
+                                                <option>左移显示</option>
+                                                <option>右移显示</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="lastname" class="col-sm-2 control-label">显示方式</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                                        <label for="firstname04" class="col-sm-3 control-label">字体大小</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control">
+                                                <option>8</option>
+                                                <option>12</option>
+                                                <option>16</option>
+                                                <option>20</option>
+                                                <option>24</option>
+                                                <option>28</option>
+                                                <option>32</option>
+                                                <option>36</option>
+                                                <option>40</option>
+                                                <option>44</option>
+                                                <option>48</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="firstname05" class="col-sm-3 control-label">字体类型</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control">
+                                                <option>宋体</option>
+                                                <option>仿宋</option>
+                                                <option>黑体</option>
+                                                <option>楷体</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstname06" class="col-sm-3 control-label">字体颜色</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control">
+                                                <option>红</option>
+                                                <option>黄</option>
+                                                <option>绿</option>
+                                                <option>蓝</option>
+                                                <option>白</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstname07" class="col-sm-3 control-label">停留时间</label>
+                                        <div class="col-sm-6 ">
+                                            <input type="number" class="form-control" id="firstname07" placeholder="5">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstname08" class="col-sm-3 control-label">移动速度</label>
+                                        <div class="col-sm-6">
+                                            <input type="number" class="form-control" id="firstname08" placeholder="5">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+
+                                            <button type="button" class="btn btn-primary btn-play col-sm-offset-2">添加</button>
+                                            <button type="button" class="btn btn-default btn-play" data-dismiss="modal">取消</button>
+                                            <!--<button type="button" class="btn btn-default btn-play col-sm-offset-3">添加</button>
+                                            <button type="button" class="btn btn-default btn-play col-sm-offset-3">播放</button>-->
                                         </div>
                                     </div>
                                 </form>
-
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
                         </div>
                     </div>
                 </div>
-
-                <button type="submit" class="btn btn-default btn-play">播放</button>
             </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-play" data-toggle="modal" data-target="#play">播放</button>
 
+                <!-- Modal -->
+                <div class="modal fade" id="play" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">播放文字信息</h4>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="fabu-cont">
+
+                                    <div class="col-lg-offset-2 checkbox-all">
+                                        <div class="easyui-panel">
+                                            <ul id="tt" class="easyui-tree" data-options="url:'tree_data.json',method:'get',animate:true,checkbox:true"></ul>
+                                        </div>
+                                    </div>
+
+                                    <form class="form-horizontal" role="form" name="form01">
+                                        <div class="form-group">
+                                            <label for="firstname01" class="col-sm-2 control-label">名称</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="firstname01" placeholder="请输入名字">
+                                            </div>
+                                            <span class="col-sm-2 form-prompt">*(20)</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstname02" class="col-sm-2 control-label">标语内容</label>
+                                            <div class="col-sm-8">
+                                                <textarea name="biaoyu-text" class="form-control" id="" cols="30" rows="4" maxlength="50"></textarea>
+                                            </div>
+                                            <span class="col-sm-2 form-prompt01">*(50)</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstname03" class="col-sm-2 control-label">显示方式</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control">
+                                                    <option>直接显示</option>
+                                                    <option>上移显示</option>
+                                                    <option>下移显示</option>
+                                                    <option>左移显示</option>
+                                                    <option>右移显示</option>
+                                                </select>
+                                            </div>
+                                            <span class="col-sm-2 form-prompt"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstname04" class="col-sm-2 control-label">字体大小</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control">
+                                                    <option>8</option>
+                                                    <option>12</option>
+                                                    <option>16</option>
+                                                    <option>20</option>
+                                                    <option>24</option>
+                                                    <option>28</option>
+                                                    <option>32</option>
+                                                    <option>36</option>
+                                                    <option>40</option>
+                                                    <option>44</option>
+                                                    <option>48</option>
+                                                </select>
+                                            </div>
+                                            <span class="col-sm-2 form-prompt"></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="firstname05" class="col-sm-2 control-label">字体类型</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control">
+                                                    <option>宋体</option>
+                                                    <option>仿宋</option>
+                                                    <option>黑体</option>
+                                                    <option>楷体</option>
+                                                </select>
+                                            </div>
+                                            <span class="col-sm-2 form-prompt"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstname06" class="col-sm-2 control-label">字体颜色</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control">
+                                                    <option>红</option>
+                                                    <option>黄</option>
+                                                    <option>绿</option>
+                                                    <option>蓝</option>
+                                                    <option>白</option>
+                                                </select>
+                                            </div>
+                                            <span class="col-sm-2 form-prompt"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstname07" class="col-sm-2 control-label">停留时间</label>
+                                            <div class="col-sm-8">
+                                                <input type="number" class="form-control" id="firstname07" placeholder="5">
+                                            </div>
+                                            <span class="col-sm-2 form-prompt">(0~255)</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstname08" class="col-sm-2 control-label">移动速度</label>
+                                            <div class="col-sm-8">
+                                                <input type="number" class="form-control" id="firstname08" placeholder="5">
+                                            </div>
+                                            <span class="col-sm-2 form-prompt">(0~255)</span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-default btn-play col-sm-offset-3">播放</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+             </div>
         </div>
     </form>
-
-
-    <!-- <div class="title2-btn">
-
-             <button type="submit" class="btn btn-default">搜索</button>
-
-             <button type="submit" class="btn btn-default">搜索</button>
-         </div>
-     </div>-->
-
    </div>
 
     <!--表格栏-->
@@ -277,8 +455,7 @@
 
 
 <script src="../lib/jquery/jquery.js"></script>
-<!--<script src="../lib/bootstrap/js/bootstrap.js"></script>-->
 <script src="../lib/bootstrap/js/bootstrap.js"></script>
-
+<script type="text/javascript" src="../lib/easyui/jquery.easyui.min.js"></script>
 </body>
 </html>

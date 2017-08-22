@@ -27,6 +27,12 @@
   <div class="weather1-title2">
     <form class="form-horizontal form-title1" role="form">
         <div class="form-group">
+
+            <label for="firstnub" class="control-label control-label1">关联设备</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="firstnub" placeholder="">
+            </div>
+
             <label for="firstname" class="control-label control-label1">文件名</label>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="firstname" placeholder="请输入文件名">
@@ -35,239 +41,230 @@
             <button type="submit" class="btn btn-default btn-search1">搜索</button>
             </div>
 
-            <div class="col-sm-offset-4 col-sm-4">
-                <button type="submit" class="btn btn-default btn-add">上传</button>
-                <button type="submit" class="btn btn-default btn-play">播放</button>
+            <div class="col-sm-5  fabuping01">
+                <button type="button" class="btn btn-default btn-add" >播放</button>
+                <button type="button" class="btn btn-default btn-edit">停止播放</button>
             </div>
 
         </div>
     </form>
+	
 
-
-    <!-- <div class="title2-btn">
-
-             <button type="submit" class="btn btn-default">搜索</button>
-
-             <button type="submit" class="btn btn-default">搜索</button>
-         </div>
-     </div>-->
 
    </div>
 
     <!--表格栏-->
+    <div class="weather1-cont">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th></th>
+                <th>播放序号</th>
+                <th>设备</th>
+                <th>原文件名</th>
+                <th>文件类型</th>
+                <th>状态</th>
+                <th>时长</th>
+                <th>上传人</th>
+                <th>上传日期</th>
+                <th>发布时间</th>
+                <th>备注</th>
+                <th>缩略图</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>气象站1</td>
+                <td>qixiangzhan00</td>
+                <td>.bmp</td>
+                <td>未播放</td>
+                <td>5</td>
+                <td>sunwei</td>
+                <td>2017/8/817:22:00</td>
+                <td>2017/8/817:22:00</td>
+                <td>天气</td>
+                <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
+                <td><button class="btn-delete">X删除</button></td>
+            </tr>
 
-  <div class="weather1-cont">
-      <table class="table table-hover">
-          <thead>
-          <tr>
-              <th></th>
-              <th>播放序号</th>
-              <th>设备</th>
-              <th>原文件名</th>
-              <th>文件类型</th>
-              <th>状态</th>
-              <th>时长</th>
-              <th>上传人</th>
-              <th>上传日期</th>
-              <th>发布时间</th>
-              <th>备注</th>
-              <th>缩略图</th>
-              <th>操作</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
-          <tr>
-              <td><input type="checkbox"/></td>
-              <td>1</td>
-              <td>气象站1</td>
-              <td>qixiangzhan00</td>
-              <td>.bmp</td>
-              <td>未播放</td>
-              <td>5</td>
-              <td>sunwei</td>
-              <td>2017/8/817:22:00</td>
-              <td>2017/8/817:22:00</td>
-              <td>天气</td>
-              <td><img src="../img/map-header.jpg" alt="缩略图"/></td>
-              <td><button class="btn-delete">X删除</button></td>
-          </tr>
 
-
-          </tbody>
-      </table>
-  </div>
+            </tbody>
+        </table>
+    </div>
 
     <div class="weather1-footer">
         <a href="#" class="pager1">上一页</a>
         <a href="#" class="pager1">下一页</a>
         <span class="paging">第1页/共5页</span>
     </div>
-
 
 
 </section>

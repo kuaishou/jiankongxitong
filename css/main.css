@@ -100,7 +100,6 @@ body{
 }
 .map-body{
     background-image:url("../img/bg.jpg");
-
 }
 
 #header{
@@ -109,6 +108,9 @@ body{
     color: #fff;
     border-bottom: 2px solid #0a2655;
 }
+
+
+
 
 
 /*登录*/
@@ -138,6 +140,11 @@ body{
 	height: 80px;
 	width: 440px;
 	margin-top: 30px;
+    background: -webkit-linear-gradient(#004fbf, #002256); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#004fbf, #002256); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#004fbf, #002256); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(#004fbf, #002256); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#004fbf, #002256); /* 标准的语法 */
 }
 
 .camera-img{
@@ -171,17 +178,42 @@ body{
 
 
 .travel-index-btngroup .travel-index-btndetail{
+    width: 164px;
+    text-align: center;
     margin-top: 8px;
-	margin-left: -17px;
+    margin-left: -17px;
 }
 
 .travel-index-btngroup a{
 	font-size:50px;
-    width: 100px;
-    height: 100px;
-	padding-left: 20px;
-    padding-top: 20px;
+    width: 128px;
+    height: 128px;
+	/*padding-left: 20px;
+    padding-top: 20px;*/
+    background: -webkit-linear-gradient(#296cff, #060f41); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#296cff, #060f41); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#296cff, #060f41); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(#296cff, #060f41); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#296cff, #060f41); /* 标准的语法 */
 }
+.travel-index-btngroup a i{
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 6px;
+}
+/*停车场*/
+.travel-index-btngroup a .stop{
+    font-size: 80px;
+    margin-top: 0;
+}
+
+
+
+/*渐变色*/
+
+
+
+
 
 .map-index{
 	height:820px;

@@ -101,7 +101,7 @@
 
             </div>
         </div>
-        <iframe src="weatherlis2.html" class="col-md-10 iframex" name="home1" id="Iframe" frameborder="0" scrolling="no"></iframe>
+        <iframe src="weatherlis6.html" class="col-md-10 iframex" name="home1" id="Iframe" height="780px" frameborder="0" scrolling="no"></iframe>
 
 
 
@@ -120,11 +120,8 @@
 
 <script src="../lib/jquery/jquery.js"></script>
 <script src="../lib/bootstrap/js/bootstrap.js"></script>
-
 <script>
 
-    var ifm= document.getElementById("Iframe");
-    ifm.height=document.documentElement.clientHeight;
 
     var navTtabs=$(".panel-body .nav-tabs li")
     for(var i=0;i<navTtabs.length;i++){
@@ -133,8 +130,8 @@
             var j=this.index+1;
             $("#Iframe").attr("src","weatherlis"+j+".html");
             /*iframe的高度自适应*/
-            var ifm= document.getElementById("Iframe");
-            ifm.height=document.documentElement.clientHeight;
+           /* var ifm= document.getElementById("Iframe");
+            ifm.height=document.documentElement.clientHeight;*/
         }
     }
 
@@ -148,23 +145,6 @@
         });
     });
 
-    /*$(".ctrl-click").mousemove(function(){
-        $(".ctrl-click").css({"background-color":"#fff","color":"#000"});
-        $(this).css({"background-color":"#61c6d0","color":"#fff"});
-    })
-    /!* $(".ctrl-click").mouseout(function(){
-     $(".ctrl-click").css({"background-color":"#fff","color":"#000"});
-     })*!/
-
-
-    $(".ctrl-click").each(function(){
-        $(".ctrl-click").click(function(){
-            $(".ctrl-click").css({"background-color":"#fff","color":"#000"});
-            $(this).css({"background-color":"#61c6d0","color":"#fff"});
-
-
-        });
-    });*/
 
 </script>
 </body>

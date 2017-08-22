@@ -61,6 +61,13 @@
 .checkbox-all .panel-body .tree-collapsed {
     margin-top: 10px;
 }
+.checkbox-all .panel-body .tree-expanded-hover {
+    margin-top: 10px;
+}
+.checkbox-all .panel-body .tree-expanded {
+    margin-top: 10px;
+}
+
 .checkbox-all .panel-body .tree-node-selected{
     font-size: 18px;
 }
@@ -94,16 +101,85 @@
     color: #ffffff;
     border: none;
     margin-top: 30px;
-
-
+}
+.fabu-cont .form-horizontal .form-group .btn-post{
+    width: 100px;
+    background-color: #25a3d3;
+    color: #ffffff;
+    border: none;
+    background: -webkit-linear-gradient(#20b1dd, #2892c6); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#20b1dd, #2892c6); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#20b1dd, #2892c6); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(#20b1dd, #2892c6); /* ie*/
+    background: linear-gradient(#20b1dd, #2892c6); /* 标准的语法 */
 }
 
-.fabu-cont .form-horizontal .form-group  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+/*.fabu-cont .form-horizontal .form-group  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
     position: relative;
     min-height: 1px;
     padding-right: 15px;
-     padding-left: 0px;
+     padding-left: 15px;
+}*/
+
+
+/*文字信息播放按钮后模态框界面*/
+
+.modal .modal-dialog {
+    width: 1000px;
+    margin: 30px auto;
+}
+.modal .modal-content{
+    width: 1000px;
+    height: 780px;
 }
 
+.modal .fabu-cont {
+    width: 96%;
+    height: 720px;
+    margin-top: 30px;
+    background-color: transparent;
+}
 
+.modal .fabu-cont .checkbox-all {
+    float: left;
+    width: 21%;
+    padding-top: 0px;
+}
+.modal .fabu-cont .checkbox-all .panel {
+    width: 200px;
+    float: left;
+    overflow: hidden;
+    text-align: left;
+    margin: 0;
+    border: none;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+    padding: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.modal .checkbox-all .panel-body {
+    width: 200px;
+
+    background-color: transparent;
+    color: #000000;
+    font-size: 12px;
+    border: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.modal .fabu-cont .form-horizontal {
+    width: 60%;
+    float: left;
+    margin-top: 0px;
+    color: #000000;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 9999;
+}
 
