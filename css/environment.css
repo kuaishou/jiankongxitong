@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+
+.tab-content .tab-pane  .evmt-button{
+    margin-left: 910px;
+}
+
+.tab-content .tab-pane  .evmt-button .camera-btn03{
+    width: 100px;
+    height: 36px;
+    background: -webkit-linear-gradient(#20b1dd, #2890c7);
+    background: -o-linear-gradient(#20b1dd, #2890c7);
+    background: -moz-linear-gradient(#20b1dd, #2890c7);
+    background: -ms-linear-gradient(#20b1dd, #2890c7);
+    background: linear-gradient(#20b1dd, #2890c7);
+    line-height: 16px;
+    margin-left: 10px;
+}
+/*实时监控*/
+#look .weather1 .fabu-cont .checkbox-all {
+    float: left;
+    width: 15%;
+    height: 100%;
+    padding-top: 40px;
+}
+#look .weather1 .fabu-cont .checkbox-all .panel-body{
+
+    width: 280px;
+}
+
+#look .weather1 .fabu-cont .checkbox-all #_easyui_tree_1{
+    display: none;
+}
+
+#look .weather1 .fabu-cont {
+    width: 99%;
+    height: 800px;
+    margin-top: 0px;
+    margin-left: 10px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#look .weather1 .fabu-cont .checkbox-all{
+    height: 800px;
+    background-color: #001a3f;
+    border: 1px solid #01245a;
+    margin-right: 10px;
+}
+/*右侧盒子*/
+#look .weather1 .fabu-cont .emt-right{
+    float: right;
+    width: 84%;
+    height: 100%;
+    background-color: #001941;
+    border: 1px solid #01245c;
+}
+#look .weather1 .fabu-cont .emt-right .emt-rightbox{
+    float: left;
+    width: 506px;
+    height: 360px;
+   /* margin-right: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;*/
+    margin: 20px 10px;
+    background-color: #023971;
+    padding: 20px;
+
+}
+.emt-right .emt-rightbox .emt-rightboxtitle .emt-rightboxtitle-1{
+    font-size: 22px;
+
+}
+.emt-right .emt-rightbox .emt-rightboxtitle .emt-rightboxtitle-2{
+    float: right;
+    font-size: 16px;
+}
+
+.emt-right .emt-rightbox .emt-rightboxleft{
+    float: left;
+    width: 250px;
+    height: 290px;
+    background-color: #0e60a9;
+}
+.emt-right .emt-rightbox .emt-rightboxleft .emt-rightboxleft01{
+    height: 130px;
+    line-height: 130px;
+}
+.emt-right .emt-rightbox .emt-rightboxleft .emt-rightboxleft01 .emt-rightboxleft01x{
+    float: left;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+/*.emt-right .emt-rightbox .emt-rightboxleft .emt-rightboxleft01 img{
+}
+.emt-right .emt-rightbox .emt-rightboxleft .emt-rightboxleft01 .emt-rightboxleftwed{
+
+}*/
+.emt-right .emt-rightbox .emt-rightboxleft .emt-rightboxleft01 .emt-rightboxleftnub{
+    font-size: 56px;
+
+}
+.emt-right .emt-rightbox .emt-rightboxleft .emt-rightboxleft02{
+    text-align: center;
+    padding-top: 40px;
+}
+.emt-right .emt-rightbox .emt-rightboxleft .emt-rightboxleft02 .emt-rightboxleft02l{
+    float: left;
+    width: 90px;
+
+}
+.emt-right .emt-rightbox .emt-rightboxleft .emt-rightboxleft02 .emt-rightboxleft02r{
+    float: left;
+    width: 160px;
+}
+.emt-right .emt-rightbox .emt-rightboxright{
+    float: right;
+    width: 200px;
+    height: 290px;
+
+}
+.emt-right .emt-rightbox .emt-rightboxright .emt-rightsmallbox{
+    width: 100%;
+    background-color: #0e60a9;
+
+}
+.emt-right .emt-rightbox .emt-rightboxright .emt-rightboxright1{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.emt-right .emt-rightbox .emt-rightboxright .emt-rightboxright2{
+    height: 100px;
+    margin-top: 20px;
+    padding-top: 10px;
+    line-height: 39px;
+    text-align: center;
+}
+.emt-right .emt-rightbox .emt-rightboxright .emt-rightboxright3{
+    height: 100px;
+    margin-top: 20px;
+    padding-top: 10px;
+    line-height: 39px;
+    text-align: center;
+}

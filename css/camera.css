@@ -4,14 +4,39 @@
     background: url("../img/bg.jpg");
 }
 
+
+.camera .amera01{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 /*一级导航*/
 
+.weather-header{
+    position: relative;
+    height:90px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #0a2a59;
+}
+.weather-header h2{
+    color: #ffffff;
+    line-height: 92px;
+    font-size: 42px;
+
+}
+
+
+
+
+/*一级导航*/
 .weather-header .nav-tabs {
     position: absolute;
+    top: 20px;
     left: 20px;
-    border-bottom: 0px solid #ddd;
+     border-bottom: 0px solid #ddd;
     height: 92px;
-	margin-top: -35px;
 }
 .weather-header .nav-tabs li{
     width: 180px;
@@ -25,12 +50,11 @@
     background-color: transparent;
 }
 .weather-header .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-	color: #ffffff;
-	cursor: default;
+     color: #ffffff;
+     cursor: default;
     background-color: #002b6f;
     border: 0px solid #ddd;
 }
-
 
 .camera-title{
 	text-align:center;
@@ -41,24 +65,46 @@
 }
 
 
+
+
+
 .camera-table .table {
-    width: 90%;
+    width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
-    border: 1px solid #dddddd;
 	background-color:white;
+}
+/*头部渐变色*/
+.camera-table .table .theader{
+    font-size: 16px;
+    background: -webkit-linear-gradient(#01429e, #002961); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#01429e, #002961); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#01429e, #002961); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(#01429e, #002961); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#01429e, #002961); /* 标准的语法 */
+
+}
+
+
+
+.camera-table .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+     vertical-align: middle;
+    border-top: 1px solid #ddd;
 }
 .camera-table .table thead tr{
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background-color: #60c7d0;
+   /* background-color: #60c7d0;*/
     color: #fff;
 
 }
 .camera-table .table thead tr th{
     text-align: center;
+    font-weight: 400;
 }
 
 .camera-table .table tbody tr{
@@ -66,9 +112,9 @@
     line-height: 40px;
     text-align: center;
 }
-
-.camera-table .table tbody tr td{
+.camera-table .table tbody tr td {
     text-align: center;
+    font-size: 16px;
 }
 .camera-table .table tbody tr td input{
     margin-top: 0px;
@@ -79,9 +125,27 @@
 	margin-left: 940px;
 }
 
-.camera-button button{
-    width: 74px;
-    height: 30px;
+.camera-btn01{
+    width: 100px;
+    height: 36px;
+    background: -webkit-linear-gradient(#00439e, #002961); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#00439e, #002961); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#00439e, #002961); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(#00439e, #002961); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#00439e, #002961); /* 标准的语法 */
+    line-height: 16px;
+    margin-left: 10px;
+    border-color: transparent;
+
+}
+.camera-button .camera-btn02{
+    width: 100px;
+    height: 36px;
+    background: -webkit-linear-gradient(#0096f5, #0076d2); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#0096f5, #0076d2); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#0096f5, #0076d2); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(#0096f5, #0076d2); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#0096f5, #0076d2); /* 标准的语法 */
     line-height: 16px;
     margin-left: 10px;
 }
@@ -114,18 +178,204 @@
     line-height: 30px;
 }
 
-.camera-foot .pager{
-    float: left;
-    padding-left: 0;
+
+.form-horizontal .control-label {
+    padding-right: 12px;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 16px;
+}
+.modal-title {
     margin: 0;
     text-align: center;
-    list-style: none;
+    line-height: 1.42857143;
 }
 
-.camera-foot .pager li > a, .camera-foot .pager li > span {
+#home .form-inline .camera-search .form-group label{
+    font-size: 16px;
+}
+
+/*分页*/
+.weather1-footer{
+    font-size: 14px;
+}
+.weather1-footer .paging{
+    color: #005ddb;
+    float: right;
+    line-height: 36px;
+    margin-right: 10px;
+}
+
+.weather1-footer .pager1{
+    width: 60px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #012d6a;
+    border-radius: 4px;
+    color: #005ddb;
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+
+/*主预览界面*/
+
+#look{
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+#look .panel-group .panel-title > a, .panel-title > small, .panel-title > .small, .panel-title > small > a, .panel-title > .small > a {
     display: inline-block;
-    padding: 0px 14px;
-    background-color: #f6f6f6;
-    border: 1px solid #ddd;
-    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+#look .panel-group .panel-title > a .glyphicon{
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 30px;
+}
+/*.glyphicon{
+    margin-right: 30px;
+}*/
+#look .panel-group  .nav-tabs > .active{
+    background-color: #00091a;
+}
+#look .panel-group  .nav-tabs > li > a {
+
+    height: 34px;
+    padding-left: 70px;
+    line-height: 12px;
+    margin-right: 2px;
+    /* line-height: 1.42857143; */
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+#look .panel-group  .nav-tabs > li> a:hover{
+    background-color: #00091a;
+}
+
+#look .panel-group  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #ffffff;
+    cursor: default;
+    background-color: #00091a;
+    border:none;
+    border-bottom-color: transparent;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+     border: 1px solid #002359;
+     border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+#look .panel-group .panel-default > .panel-heading {
+    color: #333;
+    background-color: #01193f;
+    border: none;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #002359;
+    background-color: #00183c;
+}
+
+#look .panel-group .nav-tabs {
+    border-bottom: 1px solid #002359;
+}
+
+
+/*右侧视频监控窗口*/
+.camera1{
+    background-color: #00142f;
+    width: 96%;
+    margin-left: 30px;
+}
+.camera-right .imgs .video{
+    float: left;
+    width: 780px;
+    height: 376px;
+}
+.camera-right .imgs .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+     min-height: 1px;
+     padding-right: 0px;
+     padding-left: 0px;
+     overflow: hidden;
+}
+
+.camera1 .cont-botom{
+    height: 60px;
+}
+.camera1 .cont-botom .cont-botom-left{
+    float: left;
+}
+.camera1 .cont-botom .cont-botom-left button{
+    height: 34px;
+    width: 34px;
+    border: none;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 10px;
+
+}
+
+.camera1 .cont-botom .cont-botom-left .left01{
+     background: url('../img/btm-btn01.jpg') no-repeat center center;
+ }
+.camera1 .cont-botom .cont-botom-left .left02{
+    background: url('../img/btm-btn02.jpg') no-repeat center center;
+}
+.camera1 .cont-botom .cont-botom-left .left03{
+    background: url('../img/btm-btn03.jpg') no-repeat center center;
+}
+
+
+.camera1 .cont-botom .cont-botom-right{
+    float: right;
+}
+.camera1 .cont-botom .cont-botom-right button{
+    height: 34px;
+    width: 43px;
+    border: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+}
+.camera1 .cont-botom .cont-botom-right .right01{
+    background: url('../img/btm-btn04.jpg') no-repeat center center;
+}
+.camera1 .cont-botom .cont-botom-right .right02{
+    background: url('../img/btm-btn05.jpg') no-repeat center center;
+}
+.camera1 .cont-botom .cont-botom-right .right03{
+    background: url('../img/btm-btn06.jpg') no-repeat center center;
+}
+.camera1 .cont-botom .cont-botom-right .right04{
+    background: url('../img/btm-btn07.jpg') no-repeat center center;
+}
+.camera1 .cont-botom .cont-botom-right .right05{
+    background: url('../img/btm-btn08.jpg') no-repeat center center;
+}
+
+.modal-header{
+    color: #ffffff;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background: -webkit-linear-gradient(#01419b, #012861); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#01419b, #012861); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#01419b, #012861); /* Firefox 3.6 - 15 */
+    background: -ms-linear-gradient(#01419b, #012861); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#01419b, #012861); /* 标准的语法 */
 }

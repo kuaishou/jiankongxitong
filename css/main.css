@@ -209,42 +209,37 @@ body{
 
 
 
-/*渐变色*/
 
 
-
-
-
-.map-index{
-	height:820px;
-	width:100%;
-	z-index:-1;
-}
-
-
-.col-xs-1 .map-checkbox{
-    zoom:150%;
-    margin:0;
-}
-
-.map01{
-    position: relative;
-}
-.map01 .map-detail{
+/*头部用户*/
+.weather-header .user{
     position: absolute;
-    bottom: 168px;
-    left: 360px;
-    width:200px;
-    color:#ffffff;
+    top: 0;
+    right: 80px;
+    margin-top: 24px;
 }
-
-.map-detail-title{
-	text-align:center;
-	background-image:url("../img/map-header.jpg");
-	background-size:cover;  
+.weather-header .user .userimg{
+    height: 48px;
+    width: 48px;
 }
+.weather-header .user .btn-group .btn{
+    color: #ffffff;
+    border: none;
+    background-color: #041028;
+}
+.dropdown-menu {
+    min-width: 100px;
+    color: #ffffff;
+    background-color: #0a4083;
 
-.map-detail-content{
-	background-image:url("../img/map-bottom.jpg");
-	background-size:cover;  
+}
+.weather-header .user .signOut{
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    background-color: #041028;
+}
+.dropdown-menu>li>a {
+    color: #ffffff;
+
 }

@@ -8,6 +8,7 @@
     <title>地图</title>
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/map.css">
 <!--    <link rel="stylesheet" href="../css/zhihui.css">-->
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=D2d2d2a3b3b5405b6b74b49173fd899a"></script>
     <!--[if lt IE 9]>
@@ -17,7 +18,7 @@
 
 </head>
 <body class="map-body">
-<header id="header">
+<header id="header" class="weather-header">
 	<div class="col-xs-12">
 		<span id="time" class="col-xs-2 time">2017-08-09 17:30</span>
 		<div class="col-xs-1">
@@ -36,20 +37,62 @@
 			<input class="map-checkbox" type="checkbox" id="weather">气象</input>
 		</div>
 	</div>
+
+	<div class="user">
+		<img class="userimg" src="../img/user.jpg" alt="用户头像"/>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">user1
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li>
+					<a href="#">系统设置</a>
+				</li>
+				<li>
+					<a href="#">用户管理</a>
+				</li>
+			</ul>
+		</div>
+		<button class="signOut">退出</button>
+
+
+	</div>
     
 
 </header>
 <section class="map01">
-<div class="map-index" id="allmap">
+    <div class="map-index" id="allmap">
 
-</div>
-<div class="map-detail">
-	<div class="map-detail-title">实时游客数据</div>
-	<div class="map-detail-content">
-		<span>游客数:  156</span>
-		<span>园区饱满度:  60%</span>
+    </div>
+
+     <div class="map-detail map-detail1">
+     	<img src="../img/mapvideo.jpg" alt=""/>
+     </div>
+
+     <div class="map-detail map-detail2">
+     	<div class="map-detail-title">吉首第一停车场</div>
+     	<div class="map-detail-content">
+     		<p>已停车位数: 66</p>
+     		<p>剩余车位数: 80</p>
+     	</div>
+     </div>
+     <div class="map-detail map-detail4">
+     	<div class="map-detail-title">实时游客数据</div>
+     	<div class="map-detail-content">
+     		<p>游客数:  1566</p>
+     		<p>园区饱满度:  60%</p>
+     	</div>
+     </div>
+	<div class="map-detail map-detail5">
+		<div class="map-detail-title">德夯景区</div>
+		<div class="map-detail-content map-detail-content1">
+			<p>温度:  22℃</p>
+			<p>湿度:  60%</p>
+			<p>PM:  600</p>
+		</div>
 	</div>
-</div>
+
 </section>
 <!--头部区域-->
 <script src="../lib/jquery/jquery.js"></script>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>视频监控系统</title>
+
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../lib/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../lib/easyui/themes/icon.css">
+    <link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/weather2.css"/>
+    <link rel="stylesheet" href="../css/camera.css">
+    <link rel="stylesheet" href="../css/environment.css">
+	<!--<link rel="stylesheet" href="../css/weather1.css">-->
+
+
+   <!-- <link rel="stylesheet" href="../css/weather.css">-->
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.min.js"></script>
+    <![endif]-->
+	<style>
+	</style>
+</head>
+<body class="camera weather">
+<!--头部-->
+<header class="weather-header">
+	<h2>视频监控系统</h2>
+	<ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#home" data-toggle="tab">
+                <span class="glyphicon glyphicon-facetime-video"></span> 气象站
+            </a>
+        <li><a href="#look" data-toggle="tab"> <span class="glyphicon glyphicon-th-large"></span> 实时监控</a>
+    </ul>
+	<div class="user">
+		<img class="userimg" src="../img/user.jpg" alt="用户头像"/>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">user1
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li>
+					<a href="#">系统设置</a>
+				</li>
+				<li>
+					<a href="#">用户管理</a>
+				</li>
+			</ul>
+		</div>
+		<button class="signOut">退出</button>
+
+
+	</div>
+</header>
+
+		<div id="myTabContent" class="tab-content">
+			<div class="tab-pane fade   col-md-12" id="home">
+				<div class="container">
+
+					<!--查询部分-->
+					<form class="form-inline">
+						<fieldset class="camera-search">
+							<div class="form-group col-sm-3" >
+								<label for="title-name0" >编号</label>
+								<input type="text" class="form-control" id="title-name0" placeholder="请输入关键字">
+							</div>
+							<div class="form-group col-sm-3" >
+								<label for="title-name" >名称</label>
+								<input type="text" class="form-control" id="title-name" placeholder="请输入关键字">
+							</div>
+							<button type="button" class="btn btn-primary camera-btn01" onclick="getTableData('begin')">搜索</button>
+						</fieldset>
+					</form>
+					<!--添加删除部分-->
+					<div class="camera-button evmt-button">
+						<button class="btn btn-primary camera-btn02" id="add" data-toggle="modal" data-target="#myModal">添加</button>
+						<!--添加页面模态弹出框-->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="myModalLabel">添加摄像头信息</h4>
+									</div>
+									<div class="modal-body">
+										<form class="form-horizontal" id="saveFrom">
+											<div class="form-group">
+												<label for="num" class="col-sm-4 control-label">编号</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="num"  placeholder="请填写编号"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="name" class="col-sm-4 control-label">名称</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="name"  placeholder="请填写名称"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="view" class="col-sm-4 control-label">景区</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="view"  placeholder="请填写景区"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="lon" class="col-sm-4 control-label">经度</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="lon"  placeholder="请填写经度"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="lat" class="col-sm-4 control-label">纬度</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="lat"  placeholder="请填写纬度"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="ip" class="col-sm-4 control-label">接口地址</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="ip"  placeholder="请填写接口地址"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="port" class="col-sm-4 control-label">端口</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="port"  placeholder="请填写端口"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="username" class="col-sm-4 control-label">用户名</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="username"  placeholder="请填写用户名"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="password" class="col-sm-4 control-label">密码</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="password"  placeholder="请填写密码"/>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary">提交</button>
+										<button type="button" class="btn btn-warning" data-dismiss="modal">取消</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="btn btn-primary camera-btn03" id="modify0" data-toggle="modal" data-target="#modify">修改</button>
+						<!--添加页面模态弹出框-->
+						<div class="modal fade" id="modify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="myModalLabel">添加摄像头信息</h4>
+									</div>
+									<div class="modal-body">
+										<form class="form-horizontal" id="saveFrom">
+											<div class="form-group">
+												<label for="num" class="col-sm-4 control-label">编号</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="num"  placeholder="请填写编号"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="name" class="col-sm-4 control-label">名称</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="name"  placeholder="请填写名称"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="view" class="col-sm-4 control-label">景区</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="view"  placeholder="请填写景区"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="lon" class="col-sm-4 control-label">经度</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="lon"  placeholder="请填写经度"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="lat" class="col-sm-4 control-label">纬度</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="lat"  placeholder="请填写纬度"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="ip" class="col-sm-4 control-label">接口地址</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="ip"  placeholder="请填写接口地址"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="port" class="col-sm-4 control-label">端口</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="port"  placeholder="请填写端口"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="username" class="col-sm-4 control-label">用户名</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="username"  placeholder="请填写用户名"/>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="password" class="col-sm-4 control-label">密码</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control" id="password"  placeholder="请填写密码"/>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary">提交</button>
+										<button type="button" class="btn btn-warning" data-dismiss="modal">取消</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--列表部分-->
+					<div class="table-responsive camera-table">
+						<table  class="table table-hover">
+							<thead class="theader">
+							<tr>
+								<th></th>
+								<th>编号</th>
+								<th>名称</th>
+								<th>景区</th>
+								<th>经度</th>
+								<th>纬度</th>
+								<th>接口地址</th>
+								<th>端口</th>
+								<th>用户名</th>
+								<th>密码</th>
+								<th>操作</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td><input type="checkbox"/></td>
+								<td>101</td>
+								<td>气象站1</td>
+								<td>德夯景区</td>
+								<td>N21</td>
+								<td>W33</td>
+								<td>192.168.21</td>
+								<td>8080</td>
+								<td>admin</td>
+								<td>123456</td>
+								<td>
+									<button class="btn btn-mini btn-info" data-toggle="modal" data-target="#editModal">编辑</button>
+									<button class="btn btn-mini btn-warning" data-toggle="modal" data-target="#delModal">删除</button>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"/></td>
+								<td>101</td>
+								<td>气象站1</td>
+								<td>德夯景区</td>
+								<td>N21</td>
+								<td>W33</td>
+								<td>192.168.21</td>
+								<td>8080</td>
+								<td>admin</td>
+								<td>123456</td>
+								<td>
+									<button class="btn btn-mini btn-info" data-toggle="modal" data-target="#editModal">编辑</button>
+									<button class="btn btn-mini btn-warning" data-toggle="modal" data-target="#delModal">删除</button>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"/></td>
+								<td>101</td>
+								<td>气象站1</td>
+								<td>德夯景区</td>
+								<td>N21</td>
+								<td>W33</td>
+								<td>192.168.21</td>
+								<td>8080</td>
+								<td>admin</td>
+								<td>123456</td>
+								<td>
+									<button class="btn btn-mini btn-info" data-toggle="modal" data-target="#editModal">编辑</button>
+									<button class="btn btn-mini btn-warning" data-toggle="modal" data-target="#delModal">删除</button>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"/></td>
+								<td>101</td>
+								<td>气象站1</td>
+								<td>德夯景区</td>
+								<td>N21</td>
+								<td>W33</td>
+								<td>192.168.21</td>
+								<td>8080</td>
+								<td>admin</td>
+								<td>123456</td>
+								<td>
+									<button class="btn btn-mini btn-info" data-toggle="modal" data-target="#editModal">编辑</button>
+									<button class="btn btn-mini btn-warning" data-toggle="modal" data-target="#delModal">删除</button>
+								</td>
+							</tr>
+
+
+							</tbody>
+
+						</table>
+					</div>
+
+					<!--编辑页面模态弹出框-->
+					<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title" id="myModalLabel">添加摄像头信息</h4>
+								</div>
+								<div class="modal-body">
+									<form class="form-horizontal" id="saveFrom">
+										<div class="form-group">
+											<label for="num" class="col-sm-4 control-label">编号</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" id="num"  placeholder="请填写编号"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="name" class="col-sm-4 control-label">名称</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" id="name"  placeholder="请填写名称"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="view" class="col-sm-4 control-label">景区</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" id="view"  placeholder="请填写景区"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="lon" class="col-sm-4 control-label">经度</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" id="lon"  placeholder="请填写经度"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="lat" class="col-sm-4 control-label">纬度</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" id="lat"  placeholder="请填写纬度"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="ip" class="col-sm-4 control-label">接口地址</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" id="ip"  placeholder="请填写接口地址"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="port" class="col-sm-4 control-label">端口</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" id="port"  placeholder="请填写端口"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="username" class="col-sm-4 control-label">用户名</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" id="username"  placeholder="请填写用户名"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="password" class="col-sm-4 control-label">密码</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" id="password"  placeholder="请填写密码"/>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary">提交</button>
+									<button type="button" class="btn btn-warning" data-dismiss="modal">取消</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--编辑页面模态弹出框-->
+					<div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title" id="myModalLabel">提示信息</h4>
+								</div>
+								<div class="modal-body">
+									你确定要删除此内容内容吗？
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary">提交</button>
+									<button type="button" class="btn btn-warning" data-dismiss="modal">取消</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="weather1-footer">
+						<a href="#" class="pager1">上一页</a>
+						<a href="#" class="pager1">下一页</a>
+						<span class="paging">第1页/共5页</span>
+					</div>
+
+
+				</div>
+
+				</div>
+
+			<div class="tab-pane fade in active col-md-12" id="look">
+
+				<section class="weather1">
+					<div class="fabu-cont">
+
+						<div class="checkbox-all">
+							<div class="easyui-panel" style="width: 280px">
+								<ul id="tt" class="easyui-tree" data-options="url:'tree_data01.json',method:'get',animate:true,checkbox:true"></ul>
+							</div>
+						</div>
+
+						<div class="emt-right clearfix">
+							<div class="emt-rightbox">
+								<div class="emt-rightboxtitle">
+									<span class="emt-rightboxtitle-1">德夯景区</span>
+									<span class="emt-rightboxtitle-2">2017年9月18日</span>
+								</div>
+								<div class="emt-rightboxleft">
+									<div class="emt-rightboxleft01">
+										<div class="emt-rightboxleft01x">
+										<img src="../img/sun1.jpg" alt="天气图"/>
+										<span class="emt-rightboxleftwed">晴</span>
+										</div>
+										<span class="emt-rightboxleftnub">31°</span>
+									</div>
+									<div class="emt-rightboxleft02">
+										<div class="emt-rightboxleft02l">
+											<p>东风</p>
+											<p>1级</p>
+										</div>
+										<div class="emt-rightboxleft02r">
+											<p>温度</p>
+											<p>20℃~32℃</p>
+										</div>
+
+
+
+									</div>
+								</div>
+								<div class="emt-rightboxright">
+									<div class="emt-rightsmallbox emt-rightboxright1">
+										<span>上午</span>
+										<span>10:00</span>
+									</div>
+									<div class="emt-rightsmallbox emt-rightboxright2">
+										<p>PM2.5</p>
+										<p>30Ug/m</p>
+									</div>
+									<div class="emt-rightsmallbox emt-rightboxright3">
+										<p>湿度</p>
+										<p>30%</p>
+									</div>
+								</div>
+							</div>
+							<div class="emt-rightbox">
+								<div class="emt-rightboxtitle">
+									<span class="emt-rightboxtitle-1">德夯景区</span>
+									<span class="emt-rightboxtitle-2">2017年9月18日</span>
+								</div>
+								<div class="emt-rightboxleft">
+									<div class="emt-rightboxleft01">
+										<div class="emt-rightboxleft01x">
+										<img src="../img/sun1.jpg" alt="天气图"/>
+										<span class="emt-rightboxleftwed">晴</span>
+										</div>
+										<span class="emt-rightboxleftnub">31°</span>
+									</div>
+									<div class="emt-rightboxleft02">
+										<div class="emt-rightboxleft02l">
+											<p>东风</p>
+											<p>1级</p>
+										</div>
+										<div class="emt-rightboxleft02r">
+											<p>温度</p>
+											<p>20℃~32℃</p>
+										</div>
+
+
+
+									</div>
+								</div>
+								<div class="emt-rightboxright">
+									<div class="emt-rightsmallbox emt-rightboxright1">
+										<span>上午</span>
+										<span>10:00</span>
+									</div>
+									<div class="emt-rightsmallbox emt-rightboxright2">
+										<p>PM2.5</p>
+										<p>30Ug/m</p>
+									</div>
+									<div class="emt-rightsmallbox emt-rightboxright3">
+										<p>湿度</p>
+										<p>30%</p>
+									</div>
+								</div>
+							</div>
+							<div class="emt-rightbox">
+								<div class="emt-rightboxtitle">
+									<span class="emt-rightboxtitle-1">德夯景区</span>
+									<span class="emt-rightboxtitle-2">2017年9月18日</span>
+								</div>
+								<div class="emt-rightboxleft">
+									<div class="emt-rightboxleft01">
+										<div class="emt-rightboxleft01x">
+											<img src="../img/sun1.jpg" alt="天气图"/>
+											<span class="emt-rightboxleftwed">晴</span>
+										</div>
+										<span class="emt-rightboxleftnub">31°</span>
+									</div>
+									<div class="emt-rightboxleft02">
+										<div class="emt-rightboxleft02l">
+											<p>东风</p>
+											<p>1级</p>
+										</div>
+										<div class="emt-rightboxleft02r">
+											<p>温度</p>
+											<p>20℃~32℃</p>
+										</div>
+
+
+
+									</div>
+								</div>
+								<div class="emt-rightboxright">
+									<div class="emt-rightsmallbox emt-rightboxright1">
+										<span>上午</span>
+										<span>10:00</span>
+									</div>
+									<div class="emt-rightsmallbox emt-rightboxright2">
+										<p>PM2.5</p>
+										<p>30Ug/m</p>
+									</div>
+									<div class="emt-rightsmallbox emt-rightboxright3">
+										<p>湿度</p>
+										<p>30%</p>
+									</div>
+								</div>
+							</div>
+							<div class="emt-rightbox">
+								<div class="emt-rightboxtitle">
+									<span class="emt-rightboxtitle-1">德夯景区</span>
+									<span class="emt-rightboxtitle-2">2017年9月18日</span>
+								</div>
+								<div class="emt-rightboxleft">
+									<div class="emt-rightboxleft01">
+										<div class="emt-rightboxleft01x">
+											<img src="../img/sun1.jpg" alt="天气图"/>
+											<span class="emt-rightboxleftwed">晴</span>
+										</div>
+										<span class="emt-rightboxleftnub">31°</span>
+									</div>
+									<div class="emt-rightboxleft02">
+										<div class="emt-rightboxleft02l">
+											<p>东风</p>
+											<p>1级</p>
+										</div>
+										<div class="emt-rightboxleft02r">
+											<p>温度</p>
+											<p>20℃~32℃</p>
+										</div>
+
+
+
+									</div>
+								</div>
+								<div class="emt-rightboxright">
+									<div class="emt-rightsmallbox emt-rightboxright1">
+										<span>上午</span>
+										<span>10:00</span>
+									</div>
+									<div class="emt-rightsmallbox emt-rightboxright2">
+										<p>PM2.5</p>
+										<p>30Ug/m</p>
+									</div>
+									<div class="emt-rightsmallbox emt-rightboxright3">
+										<p>湿度</p>
+										<p>30%</p>
+									</div>
+								</div>
+							</div>
+							<div class="emt-rightbox">
+								<div class="emt-rightboxtitle">
+									<span class="emt-rightboxtitle-1">德夯景区</span>
+									<span class="emt-rightboxtitle-2">2017年9月18日</span>
+								</div>
+								<div class="emt-rightboxleft">
+									<div class="emt-rightboxleft01">
+										<div class="emt-rightboxleft01x">
+											<img src="../img/sun1.jpg" alt="天气图"/>
+											<span class="emt-rightboxleftwed">晴</span>
+										</div>
+										<span class="emt-rightboxleftnub">31°</span>
+									</div>
+									<div class="emt-rightboxleft02">
+										<div class="emt-rightboxleft02l">
+											<p>东风</p>
+											<p>1级</p>
+										</div>
+										<div class="emt-rightboxleft02r">
+											<p>温度</p>
+											<p>20℃~32℃</p>
+										</div>
+
+
+
+									</div>
+								</div>
+								<div class="emt-rightboxright">
+									<div class="emt-rightsmallbox emt-rightboxright1">
+										<span>上午</span>
+										<span>10:00</span>
+									</div>
+									<div class="emt-rightsmallbox emt-rightboxright2">
+										<p>PM2.5</p>
+										<p>30Ug/m</p>
+									</div>
+									<div class="emt-rightsmallbox emt-rightboxright3">
+										<p>湿度</p>
+										<p>30%</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../lib/easyui/jquery.easyui.min.js"></script>
+<script>
+
+	var navTtabs=$(".panel-body .nav-tabs li")
+	for(var i=0;i<navTtabs.length;i++){
+		$(".panel-body .nav-tabs li")[i].index = i;
+		$(".panel-body .nav-tabs li")[i].onclick=function(){//点击连接触发
+			var j=this.index+1;
+			$("#Iframe").attr("src","camera"+j+".html");
+			/*iframe的高度自适应*/
+			/* var ifm= document.getElementById("Iframe");
+			 ifm.height=document.documentElement.clientHeight;*/
+		}
+	}
+
+</script>
+</body>
+</html>

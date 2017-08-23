@@ -1,0 +1,25 @@
+[{
+	"children":[{
+		"id":2,
+		"text":"德夯景区",
+		"state":"open",
+		"children":[{
+			"text":"画面0"
+		},{
+			"text":"画面1"
+		}]
+	},{
+		"id":3,
+		"text":"乾州古城",
+		"state":"closed",
+		"children":[{
+			"text":"画面0"
+		},{
+			"text":"画面1"
+		},{
+			"text":"画面2"
+		},{
+			"text":"画面3"
+		}]
+	}]
+}]
