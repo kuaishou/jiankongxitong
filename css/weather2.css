@@ -176,7 +176,17 @@
     margin-top: 0px;
     color: #000000;
 }
+.weather1 .modal .fabu-cont .form-horizontal .form-displayboxx{
+    display: none;
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
 
+.weather1 .modal .fabu-cont .form-horizontal .form-displayboxx .form-groupbox{
+    margin-right: 0px;
+    margin-left: 0px;
+}
 .modal-open .modal {
     overflow-x: hidden;
     overflow-y: hidden;
